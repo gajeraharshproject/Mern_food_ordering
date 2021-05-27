@@ -13,3 +13,14 @@ exports.uploderestoretnphoto = multer({
     storage:restorentphotouplodedestination,
     limits:{fileSize:1000000}
 });
+
+const fooditemuplodedestination = multer.diskStorage({
+    destination:"uplodes/product/",
+    filename:function(req,file,cb) {
+        cb(null,Date.now() + path.extname(file.originalname));
+    }
+})
+
+exports.uplodefooditem = multer({
+    storage:fooditemuplodedestination
+})

@@ -24,7 +24,7 @@ app.use(bodyparser.json());
 app.use(express.static("uplodes"))
 
 app.use("/Restorent",require("./src/routers/Restorent"));
-
+app.use("/fooditem",require("./src/routers/Fooditem"));
 
 app.listen(process.env.PORT, (err) => {
     if (err) throw err;

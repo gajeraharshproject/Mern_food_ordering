@@ -88,6 +88,10 @@ Restorent_schema.methods.gettoken = function(){
 
 }
 
+Restorent_schema.methods.ismatch = function(password){
+    return bcrypt.compare(password,this.RestorentPassword)
+}
+
 const Restorent_model = new mongoose.model("Restorents",Restorent_schema);
 module.exports = Restorent_model
 
