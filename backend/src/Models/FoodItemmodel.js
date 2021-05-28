@@ -37,7 +37,7 @@ const FoodItem_Schema = new mongoose.Schema({
            type:String,
            FoodReviewBy:{
                type:ObjectId,
-               ref:"user"
+               ref:"Users"
            }
         }
     ],
@@ -47,6 +47,11 @@ const FoodItem_Schema = new mongoose.Schema({
     },
     FoodFivestareRating:{
         type:Number,
+    },
+    Active:{
+        type:Boolean,
+        required:true,
+        default:true
     }
 
 

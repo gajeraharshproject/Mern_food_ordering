@@ -12,7 +12,7 @@ mongoose.connect("mongodb://localhost:27017/Food_ordering", {
     useCreateIndex: true,
     useNewUrlParser: true,
     useUnifiedTopology: true,
-    useFindAndModify: true
+    useFindAndModify: false
 }).then(() => console.log("connection success")).catch((error) => console.log(error))
 
 //Middle ware
@@ -25,6 +25,10 @@ app.use(express.static("uplodes"))
 
 app.use("/Restorent",require("./src/routers/Restorent"));
 app.use("/fooditem",require("./src/routers/Fooditem"));
+
+
+//get routers
+app.use("/fetch",require("./src/routers/getreq"))
 
 app.listen(process.env.PORT, (err) => {
     if (err) throw err;

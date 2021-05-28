@@ -88,6 +88,7 @@ exports.activechange = async (req, res) => {
         })
 
         if (restorent.active) {
+        
             const updateacivefalse = await Restorent_model.findByIdAndUpdate(id, {
                 active: false
             }, {
@@ -125,6 +126,28 @@ exports.RestorentLogin = async (req, res) => {
             success:false,
             token
         })
+    } catch (error) {
+        console.log(error)
+    }
+}
+
+
+exports.addfivestatereatting = async (req,res) => {
+    const {id,ratingstare} = req.body;
+    
+    try {
+        const reating = {
+            Rating:ratingstare,
+            ReviewBy:req.user._id
+        }
+        const addfivestarreating = await Restorent_model.findByIdAndUpdate(id,{
+            $push:{Fivestarereview:reating}
+        },{
+            new:true
+        });
+        if(!addfivestarreating) return res.status(500).json({msg:'Try again',success:false})
+        
+        return res.status(200).json({msg:"reating added ",success:true,data:addfivestarreating})
     } catch (error) {
         console.log(error)
     }

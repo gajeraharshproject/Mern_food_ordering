@@ -35,7 +35,14 @@ const Restorent_schema = new mongoose.Schema({
         type:String,
         ReviewBy:{
             type:ObjectId,
-            ref:"user"
+            ref:"Users"
+        }
+    }],
+    Fivestarereview:[{
+        Rating:Number,
+        ReviewBy:{
+            type:ObjectId,
+            ref:"Users",
         }
     }],
     RestorentOvnerPhone:{
