@@ -1,0 +1,38 @@
+.Navbar_Section{
+    width: 20%;
+    height: 100vh;
+    background-color: rgb(0 0 0 / 87%); 
+    box-shadow: 0 10px 30px -12px rgb(0 0 0 / 42%), 0 4px 25px 0px rgb(0 0 0 / 12%), 0 8px 10px -5px rgb(0 0 0 / 20%);
+    position: fixed;
+
+}
+
+.Nav_section_items{
+    color: white;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.nav_heading{
+    width: 100%;
+    height: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid #eee;
+}
+.nav_heading h1{
+    padding-left: 1rem;
+    font-size: 18px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.navigation_items{
+    color: white;
+    margin-top:  1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}

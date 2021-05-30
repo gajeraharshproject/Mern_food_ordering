@@ -1,24 +1,35 @@
-import logo from './logo.svg';
+
 import './App.css';
+import { Switch, Route } from 'react-router-dom'
+import Deshbord from './Pages/Deshbord/Deshbord';
+import Nav from './components/Navbar/Nav'
+import { useState } from 'react';
+import CreateRestorent from './Pages/CreateRestorent/CreateRestorent';
 
 function App() {
+  const [login, setlogin] = useState(true);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <div className="main_app_Deshbord_foodordering">
+        {
+          login ?
+            <>
+              <Nav />
+              <div className="Right_side_main_container">
+                <Switch >
+                  <Route exact path="/" component={Deshbord} />
+                </Switch>
+              </div>
+
+            </>
+            :
+            <>
+              <CreateRestorent />
+            </>
+        }
+      </div>
+    </>
   );
 }
 
