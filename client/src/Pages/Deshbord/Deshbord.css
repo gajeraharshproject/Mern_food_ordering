@@ -4,3 +4,9 @@
     justify-content:space-around;
     margin-top: 3rem;
 }
+.dashbortd_item_contaienr{
+    width: 100%;
+    display: flex;
+    justify-content:space-around;
+    margin-top: 5rem;
+}

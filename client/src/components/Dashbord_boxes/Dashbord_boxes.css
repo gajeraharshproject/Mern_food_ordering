@@ -69,3 +69,61 @@
 }
 
 
+
+
+/* dashbord item boxes style */
+.main_Dashbord_item_div{
+    width: 30%;
+    height: 18rem;
+    background-color: white;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.img_div{
+    width: 85%;
+    height:12rem;
+ display: flex;
+ justify-content: center;
+    box-shadow: 0 1px 5px 0 #afafaf;
+    position: absolute;
+    top: -1.5rem;
+
+}
+.img_div img{
+    width: 100%;
+    height: 100%;
+   
+}
+.conteint_dahsbord_item{
+    width: 100%;
+    margin-top: 11rem;
+}
+.conteint_dahsbord_item h4{ 
+    font-weight: 300;
+    margin: 0rem 0rem 0rem 1rem;
+    font-size: 20px;
+    
+}
+.conteint_dahsbord_item h6{
+    font-size: 12px;
+    margin: 0.5rem 0rem 0rem 1rem;
+}
+.updatedat_dahshbord_item{
+    width: 100%;
+    height: 2.4rem;
+    color: #999;
+    display: flex;
+    align-items: flex-end;
+
+}
+
+.updatedat_dahshbord_item span{
+    color: #999;
+    margin-left: 0.6rem;
+    font-size: 12px;
+   margin-bottom: 0.5rem;
+}

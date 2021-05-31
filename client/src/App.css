@@ -16,4 +16,5 @@
     left: 20%;
     height: 100vh;
     background-color: #eee;
+    overflow-y:auto;
 }
