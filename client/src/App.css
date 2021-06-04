@@ -18,3 +18,17 @@
     background-color: #eee;
     overflow-y:auto;
 }
+
+
+.loding_div{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.loding_div h1{
+    color: black;
+}

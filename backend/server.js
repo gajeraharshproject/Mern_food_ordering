@@ -3,6 +3,7 @@ const dotenv = require("dotenv").config();
 const app = express();
 const mongoose = require("mongoose")
 const bodyparser = require("body-parser");
+const cors = require("cors")
 
 
 // connection
@@ -18,6 +19,7 @@ mongoose.connect("mongodb://localhost:27017/Food_ordering", {
 //Middle ware
 app.use(bodyparser.urlencoded({extended:false}))
 app.use(bodyparser.json());
+app.use(cors())
 //Routing
 //static foders
 

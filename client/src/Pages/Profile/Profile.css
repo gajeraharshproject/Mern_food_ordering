@@ -1,0 +1,74 @@
+.profile_page_main{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.top_div_left_div{
+    width: 90%;
+    border-radius: 3px;
+    padding: 15px;
+    position: absolute;
+    top: -15px;
+    background: linear-gradient(60deg, #ab47bc, #8e24aa);
+    box-shadow: 0 4px 20px 0 rgb(0 0 0 / 14%), 0 7px 10px -5px rgb(156 39 176 / 40%);
+}
+.top_div_left_div h5,h6{
+    color: white;
+}
+
+.top_div_left_div h5{
+    font-weight: 200;
+    font-size: 1.1rem;
+}
+.top_div_left_div h6{
+    font-weight: 200;
+    font-size: 0.8rem;
+    color: rgb(255 255 255 / 62%);
+}
+
+.left_div_profile_inputs{
+    margin-top: 5rem;
+    width: 100%;
+}
+.left_div_profile_sub_lineejust{
+    display: flex ;
+    justify-content: space-around;
+   
+    margin: 3rem 0rem ;
+}
+.profile_image_box{
+    max-width: 130px;
+    max-height: 130px;
+   display: flex;
+   justify-content: center;
+ 
+}
+
+.Profile_image{
+  width: 50%;   
+  border-radius: 50%;   
+  position: absolute;
+  top: -50px;
+}
+
+.Restorent_details{
+    margin-top: 9rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+
+    
+}
+.Restorent_details h5{
+    margin: 0.5rem 0rem;
+    color: rgb(0 0 0 / 87%);
+}
+.Restorent_details h6{
+font-size: 0.9rem;
+margin-top: 1rem;
+color: #999;
+text-align: center;
+
+}

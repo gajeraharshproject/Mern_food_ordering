@@ -113,25 +113,44 @@ exports.activechange = async (req, res) => {
 
 exports.RestorentLogin = async (req, res) => {
     const { RestorentOvnerEmail, RestorentPassword } = req.body;
+  
+
     if (!RestorentOvnerEmail || !RestorentPassword) {
         return res.status(400).json({ msg: "Please Enter All Details ", success: false })
     }
     try {
         const checkemailexist = await Restorent_model.findOne({ RestorentOvnerEmail });
+        if(!checkemailexist){
+            return res.status(400).json({msg:"Enter Valid Email",success:false})
+        }
         const ismathch = await checkemailexist.ismatch(RestorentPassword)
+      
         if(!ismathch) return res.status(500).json({msg:"Plaase Enter Valid Password",success:false})
         const token = await checkemailexist.gettoken();
         res.status(200).json({
             msg:"you have successfully loggedin",
             success:false,
-            token
+            token,
+            data:checkemailexist
         })
     } catch (error) {
         console.log(error)
     }
 }
 
-
+exports.getRestorendata = async  (req,res) => {
+    try {
+        const data = await Restorent_model.findById(req.params.id)
+        if(data){
+   
+            return res.status(200).json({data})
+        }else{
+            return res.status(400).json({msg:"no data"})
+        }
+    } catch (error) {
+        console.log(error)
+    }
+}
 exports.addfivestatereatting = async (req,res) => {
     const {id,ratingstare} = req.body;
     

@@ -7,6 +7,7 @@ exports.CheckRestorentauth = async (req,res,next) => {
     }
 
     const token = req.headers.authorization.split(" ")[1];
+  
     if(!token){
         return res.send({msg:"you not authorize ",success:false})
     }
@@ -18,8 +19,7 @@ exports.CheckRestorentauth = async (req,res,next) => {
         req.Restorent = Restorent
         next();
     } catch (error) {
-        console.log(error)
-        res.send({msg:"you not authorize ",success:false})
+        res.status(200).json(({msg:"you not authorize ",success:false,jwterror:true}))
     }
 }
 

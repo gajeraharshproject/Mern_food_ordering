@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import './Nav.css'
 import FastfoodIcon from '@material-ui/icons/Fastfood';
 import DashboardIcon from '@material-ui/icons/Dashboard';
@@ -40,7 +40,7 @@ const usestyle = makeStyles((theme) => ({
 }))
 function Nav() {
     const classes = usestyle()
-    const [activve, setactive] = useState(["DashBord"])
+
     return (
         <>
             <section className="Navbar_Section">

@@ -1,0 +1,34 @@
+.Records_page_main_container{
+    width: 100%;
+    
+}
+
+.Recoress_page_main_div{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 3rem;
+}
+
+.left_side_records{
+    width: 45%;
+    overflow-y: auto;
+    height: 80vh;
+    background-color: #fff;
+}
+.right_side_records{
+    width: 45%;
+    overflow-y: auto;
+    height: 80vh;
+    background-color: #fff;
+}
+.heading_records{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 0rem;
+}
+.heading_records h6{
+    color: black;
+}

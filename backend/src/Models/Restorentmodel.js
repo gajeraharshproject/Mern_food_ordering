@@ -45,6 +45,24 @@ const Restorent_schema = new mongoose.Schema({
             ref:"Users",
         }
     }],
+    Orederfood:[{
+            Orderedfood:{
+                type:ObjectId,
+                ref:"FoodItems"
+            },
+            Ordereduser:{
+                type:ObjectId,
+                ref:"user",
+            },
+            TotlePrice:{
+                type:Number,
+            },
+            DeleveryStatus:{
+                type:Boolean,
+                default:true
+            }
+         
+    }],
     RestorentOvnerPhone:{
         type:String,
         required:true
@@ -96,8 +114,10 @@ Restorent_schema.methods.gettoken = function(){
 }
 
 Restorent_schema.methods.ismatch = function(password){
+      
     return bcrypt.compare(password,this.RestorentPassword)
 }
+
 
 const Restorent_model = new mongoose.model("Restorents",Restorent_schema);
 module.exports = Restorent_model

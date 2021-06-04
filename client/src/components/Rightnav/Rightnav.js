@@ -1,6 +1,6 @@
 import React from 'react'
 import './RightNav.css'
-import { IconButton, TextField, InputAdornment, makeStyles, Paper,InputBase } from '@material-ui/core'
+import { IconButton, TextField, makeStyles,Box } from '@material-ui/core'
 import SearchIcon from '@material-ui/icons/Search';
 import DashboardIcon from '@material-ui/icons/Dashboard';
 import NotificationsIcon from '@material-ui/icons/Notifications';
@@ -32,15 +32,15 @@ function Rightnav({page}) {
                     <h2>{page}</h2>
                 </div>
                 <div className="rightnav_right_items">
-                    <Paper elevation={false} component="form" className={classes.root}>
+                    <Box  component="form" className={classes.root}>
                        <TextField
                        placeholder="Search"
                        style={{width:"20rem"}}
                         />
-                        <IconButton  style={{backgroundColor:"white"}} color="white" aria-label="Search">
+                        <IconButton  style={{backgroundColor:"white"}}  aria-label="Search">
                             <SearchIcon style={{fontSize:"1rem"}}/>
                         </IconButton>
-                    </Paper>
+                    </Box>
                     <DashboardIcon style={{ marginRight: "20px" }} />
                     <NotificationsIcon style={{ marginRight: "20px" }} />
                     <PersonIcon style={{ marginRight: "20px" }} />

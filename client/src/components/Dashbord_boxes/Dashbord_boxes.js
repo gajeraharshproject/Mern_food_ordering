@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import './Dashbord_boxes.css'
-import { Typography, makeStyles, Paper, Divider } from '@material-ui/core'
-import FileCopyIcon from '@material-ui/icons/FileCopy';
+import { Typography, makeStyles, Divider,Box } from '@material-ui/core'
 const usestyle = makeStyles((theam) => ({
     boxmain: {
         width: "20%",
@@ -16,7 +15,7 @@ const usestyle = makeStyles((theam) => ({
 
     }
 }))
-function Dashbord_boxes({Logo,text,totle,color}) {
+function Dashbordboxes({Logo,text,totle,color}) {
     const classes = usestyle()
     const [colors,setcolors] = useState("absolute_logo");
     useEffect(() => {
@@ -32,7 +31,7 @@ function Dashbord_boxes({Logo,text,totle,color}) {
     },[color])
     return (
         <>
-            <Paper component="box" elevation={false} className={classes.boxmain}>
+            <Box  className={classes.boxmain}>
                 <div className="boxes_information_div">
                     <div className="boxes_logo">
                         <div className={colors }>
@@ -50,11 +49,11 @@ function Dashbord_boxes({Logo,text,totle,color}) {
                 </div>
                 <Divider />
                 <div className="updateddate">
-                    <Typography variant="p" style={{color:"#999"}}>updated 24 jun</Typography>
+                    <Typography style={{color:"#999"}}>updated 24 jun</Typography>
                 </div>
-            </Paper>
+            </Box>
         </>
     )
 }
 
-export default Dashbord_boxes
+export default Dashbordboxes

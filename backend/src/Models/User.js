@@ -13,7 +13,17 @@ const User_schema = new mongoose.Schema({
     User_password:{
         type:String,
         requird:true
-    }
+    },
+    UserOrderRecord:[{
+        UserFoodName:String,
+        UserRestorent:String,
+        UserPayment:String,
+    }],
+    UserActiveOrder:[{
+        UserFoodName:String,
+        UserRestorent:String,
+        UserPayment:String,
+    }]
 },{timestamps:true});
 
   User_schema.pre("save",(next) => {

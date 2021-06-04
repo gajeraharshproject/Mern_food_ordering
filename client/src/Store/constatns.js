@@ -1,0 +1,10 @@
+export const ADD_USER_LOGIN = "ADD_USER_LOGIN";
+export const SET_LODING = "SET_LODING";
+export const CLOSE_LODING = "CLOSE_LODING";
+export const  SET_LOGIN = "SET_LOGIN";
+export const ADD_RESTORENTDATA = "ADD_RESTORENTDATA"
+
+
+
+export const ADD_FOODITEM = "ADD_FOODITEM";
+export const ADD_ALLFOODITEM = "ADD_ALLFOODITEM";
